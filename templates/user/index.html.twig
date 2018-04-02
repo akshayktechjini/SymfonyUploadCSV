@@ -1,0 +1,27 @@
+{% block content %}
+    <div class="detail_screen_wrapper">
+        <div style="padding: 35px 25px 15px 35px;min-height: 250px;">
+                <div>
+
+                    <h2>Upload CSV File</h2><br/>
+                    <div id="errorMessage">
+                        <p style="color: red;">
+
+                        </p>
+                    </div>
+                    <form action ="{{ path('process_csv_file') }}" method ="POST" id="revenueReportForm" enctype="multipart/form-data">
+
+                        Select file to upload(.csv only):
+                        <input type="file" name="csvFile" id="csvFile"><br/><br/>
+                        <input type="submit" class="submit" name="submitButton" value="Upload" id="submitButton" />
+                        <div class='clear'></div>
+
+                    </form>
+                    <div id="displayDiv" style="color:green">
+                    </div>
+                </div>
+
+          
+        </div>
+    </div>
+{% endblock %}
